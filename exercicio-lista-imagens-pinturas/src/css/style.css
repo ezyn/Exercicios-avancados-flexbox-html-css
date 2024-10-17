@@ -1,0 +1,48 @@
+html {
+    font-family: "Public Sans", sans-serif;
+}
+
+/* centralizando todos os elementos na tela */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.pinturas {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* div pai com position relative para funcionar em conjunto com a div filho e colocar o texto dentro da imagem */
+.pinturas .pintura {
+    width: 335px;
+    height: 431px;
+    position: relative;
+}
+
+.pinturas .pintura img {
+    width: 100%;
+}
+
+/* div filho com position absoluto para encaixar o texto dentro da imagem, trabalhando junto com a div pai */
+.pinturas .pintura .informacoes {
+    position: absolute;
+    color: #FFFFFF;
+    bottom: 40px;
+    left: 20px;
+}
+
+.pinturas .pintura .informacoes .titulo {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.pinturas .pintura .informacoes .subtitulo {
+    font-weight: 300;
+    font-size: 17px;
+}
